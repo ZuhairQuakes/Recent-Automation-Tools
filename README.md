@@ -1,6 +1,6 @@
 # AI Automation Portfolio
 
-Three recently developed production AI tools are built to solve real business workflow problems.
+Four recently developed production AI tools built to solve real business workflow problems.
 Each tool was designed, built, and deployed solo, from problem identification through to working software.
 
 ---
@@ -40,15 +40,28 @@ Each tool was designed, built, and deployed solo, from problem identification th
 
 **Impact:** Sales team can answer customer availability questions in under 3 seconds while still on the phone — no callbacks, no manual checking.
 
-**Demo:** [Watch demo](https://docs.google.com/videos/d/1ygZxhiQQC4hMxKq55w33Obw9Nf81EHfGM-9bNhMfkyQ/edit?usp=sharing)
+**Demo:** [Watch demo](https://docs.google.com/videos/d/1lZh6bBFgVr7weS7EJjZnxswLFKVDarQnXkREblD0m84/play)
 
 **Stack:** Python, Flask, JavaScript, Chart.js, HTML/CSS
 
 ---
 
+### 4. Construction Drawing Check Automation
+**The problem:** Every modular construction drawing set goes through manual review before production — a senior engineer reads every sheet checking for dimension conflicts, missing specifications, compliance failures, and version errors. One drawing set takes 2–3 days. Errors missed at review are discovered after manufacturing, costing weeks of rework and significant material waste.
+
+**What it does:** Think of it as a staff member who has read every page of the drawing set and instantly flags anything that looks wrong. The tool runs automated checks across six categories — dimension consistency across sheets, specification completeness, NCC 2022 compliance, cross-trade coordination between architectural, structural, electrical and plumbing drawings, version and revision control, and drawing completeness. Each issue is classified as critical (blocks production), warning (requires engineer review), or passed. Results are generated as a downloadable PDF report ready for engineering sign-off.
+
+**Impact:** Drawing review reduced from 2–3 days of senior engineer time to under 30 seconds — every time, without missing anything. Critical issues flagged before production commences, eliminating downstream manufacturing errors.
+
+**Demo:** [Try the live demo](https://your-streamlit-url-here)
+
+**Stack:** Python, Streamlit, Claude API (Anthropic), pdfplumber, PyMuPDF, ReportLab
+
+---
+
 ## How Each Tool Was Built
 
-All three tools follow the same process:
+All four tools follow the same process:
 
 1. **Problem first** — identified a specific manual workflow costing real time or money
 2. **Simplest solution** — chose the right tool for the job, not the most complex one
@@ -63,10 +76,11 @@ All three tools follow the same process:
 | Category | Tools |
 |---|---|
 | AI and LLMs | Claude API (Anthropic), LangGraph, HuggingFace |
-| Back-End | Python, Flask, FastAPI |
+| Back-End | Python, Flask, FastAPI, Streamlit |
 | Front-End | JavaScript, HTML5, CSS3, Chart.js |
 | RAG and Search | FAISS vector store, sentence-transformers |
-| Deployment | Docker, CI/CD |
+| Document Processing | pdfplumber, PyMuPDF, ReportLab |
+| Deployment | Docker, CI/CD, Streamlit Cloud |
 | Automation | n8n, Make.com, Zapier |
 
 ---
